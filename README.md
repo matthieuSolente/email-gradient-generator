@@ -6,7 +6,7 @@ Use this generator to easily create a container with a gradient background. The 
 
 Here are the fields in order:
 - define the width of your component
--A dd a class if necessary, or leave the default one.
+- Add a class if necessary, or leave the default one.
 The class is useful to automatically calculate the height of the block, thanks to the OuterHeight() function. This will be used
 to define the height of the vml block, in case you choose to insert an image rather than text. The vml attribute mso-fit-shape-to-text no longer works when the content is an image. We must therefore change the "auto" value to height and indicate the height of the block so that the image is displayed correctly.
 - Indicate the replacement color, especially for webmails

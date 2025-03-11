@@ -8,19 +8,18 @@ Here are the fields in order:
 - define the width of your component
 - Add a class if necessary, or leave the default one.
 The class is useful to automatically calculate the height of the block, thanks to the OuterHeight() function. This will be used
-to define the height of the vml block, in case you choose to insert an image rather than text. The vml attribute mso-fit-shape-to-text no longer works when the content is an image. We must therefore change the "auto" value to height and indicate the height of the block so that the image is displayed correctly.
-- Indicate the replacement color, especially for webmails
-- indicate the desired padding
-- choose the two colors of your gradient. The vml accepts several colors, but the rendering on Outlook may differ from that observed on the browser or all other mailboxes that interpret the gradient. For this reason, I limited it to two colors, which is suitable in most cases.
+to define the height of the vml block, in case you choose to insert an image rather than text. This allows the image to be displayed correctly, especially on all rendering test tools.
+- Indicate the replacement color, especially for Yahoo/AOL(webmail, iOS, Android), Outlook(webmail, iOS, Android), GMX, Web.de
+- indicate the desired padding.for outlook, the padding will be automatically carried over to the inset attribute of the vml textbox component
+- choose the two colors of your gradient. The vml accepts several colors, but the rendering on Outlook may differ from that observed on the browser or all other mailboxes that interpret the gradient. From the moment we add percentages to define the share of each color, the differences appear.For this reason, I limited it to two colors, which is suitable in most cases.
 
 Add either :
 - a direction (top, left, right or bottom) to your gradient.
 - or an angle.
 
-To create a sort of separator, add a stop to your main color.
+To create a sort of separator, add a stop (percentage) to your main color. The percentage of the second color will be automatically calculated.
 
-Finally, choose whether you want to insert text content or a simple image. The choice is given because on Outlook, the container can adapt to the content, thanks to the "mso-fit-shape-to-test:true" property.
-For the image, this property does not allow the image to stretch to its full height. In the case of an image, we therefore indicate the height of the block, calculated using the outerHeight function.
+Finally, choose whether you want to insert text content or a simple image.
 
 Gradient, by default, doesn't work on : 
 -Yahoo(webmail, iOS and android) 

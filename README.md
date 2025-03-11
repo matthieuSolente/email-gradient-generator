@@ -22,4 +22,10 @@ To create a sort of separator, add a stop to your main color.
 Finally, choose whether you want to insert text content or a simple image. The choice is given because on Outlook, the container can adapt to the content, thanks to the "mso-fit-shape-to-test:true" property.
 For the image, this property does not allow the image to stretch to its full height. In the case of an image, we therefore indicate the height of the block, calculated using the outerHeight function.
 
+Gradient, by default, doesn't work on : 
+-Yahoo(webmail, iOS and android) 
+-Outlook (webmail and iOS and android)
+-web.de, 
+-GMX,
+
 Enjoy and don't hesitate to give me feedback if you see any areas for improvement or bugs!

@@ -17,7 +17,7 @@ Add either :
 - a direction (top, left, right or bottom) to your gradient.
 - or an angle.
 
-To create a sort of separator, add a stop (percentage) to your main color. The percentage of the second color will be automatically calculated.
+To create a sort of separator, add a stop (percentage) to your main color. The percentage of the second color will be automatically calculated. To have a clear separation, you must leave it at 50%, otherwise on Outlook the separation will be blurred.
 
 Finally, choose whether you want to insert text content or a simple image.
 

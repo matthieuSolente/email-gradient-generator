@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Html Email Template Generator">
+    <meta name="author" content="Matthieu Solente">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="email, generator, html, css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Email Gradient Generator</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="flex-container">
+        <div class="flex-row center">
+          <h1 class="title">Email Gradient separator Generator</h1>
+          <p class="description">Create your vml friendly gradient separator.</p>
+        </div>
+        <div class="flex-row">
+          <div class="flex-col-md-5">
+            <p class="heading">General settings</p>
+            <div class="generator--row">
+              <div class="generator--half-row">
+                <label for="bodyWidth">Body width</label>
+                <input type="number" name="Body width" id="bodyWidth" value="600">
+              </div>
+              <div class="generator--half-row">
+                <label for="mClass">Class for gradient container</label>
+                <input type="text" name="container class" id="mClass" value="mclass">
+              </div>
+            </div>
+            <div class="generator--row">
+              <div class="generator--half-row">
+                <label for="gradientFallbackColor">Gradient Fallback color</label>
+                <input type="text" name="fallback color" id="gradientFallbackColor" value="#000001" data-coloris>
+              </div>
+            </div>
+            <div class="generator--row">
+              <div class="generator--half-row">
+                <label for="containerLrPadding">Horizontal padding</label>
+                <input type="number" name="Container Horizontal padding" id="containerLrPadding" value="20">
+              </div>
+              <div class="generator--half-row">
+                <label for="containerTbPadding">Vertical padding</label>
+                <input type="number" name="Container Vertical padding" id="containerTbPadding" value="20">
+              </div>
+            </div>
+            <div class="generator--row">
+              <div class="generator--half-row">
+                <label for="colorOne">First Color</label>
+                <input type="text" name="Color One" id="colorOne" value="#7070d6" data-coloris>
+              </div>
+              <div class="generator--half-row">
+                <label for="colorTwo">Second Color</label>
+                <input type="text" name="Color Two" id="colorTwo" value="#ffffff" data-coloris>
+              </div>
+            </div>
+            <hr/>
+            <div class="generator--row  flex-start">
+              <input type="checkbox" name="add Direction or Angle" id="addDirAngle">&nbsp;
+              <label for="addDirAngle">Add direction or angle ?</label> 
+            </div>
+            <div id="directionBox">
+              <div id="gradientdirInput" class="generator--row">
+                <div class="generator--half-row flex-start">
+                  <input type="radio" name="gradientdir" id="gradientDirectionCheckBox" checked="checked">&nbsp;
+                  <label for="gradientDirectionCheckBox">Gradient direction</label> 
+                </div>
+                <div class="generator--half-row flex-start">
+                  <input type="radio" name="gradientdir" id="angleCheckBox">&nbsp;
+                  <label for="angleCheckBox">Gradient angle</label>              
+                </div>
+              </div>
+              <div id="gradientDirectionInput" class="generator--row">
+                <div class="generator--half-row">
+                  <label for="gradientDirection">Gradient Direction</label>
+                  <select id="gradientDirection" name="Gradient Direction">
+                    <option name="to top" value="to top" selected>Top</option>
+                    <option name="to right" value="to right">Right</option>
+                    <option name="to bottom" value="to bottom">Bottom</option>
+                    <option name="to left" value="to left">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div id="angleInput" class="generator--row">
+                <div class="generator--half-row">
+                  <label for="gradientAngle">Gradient Angle</label>
+                  <input type="number" name="Gradient Angle" id="gradientAngle" min="0" max="360" value="0">
+                  <aside class="degree">deg</aside>
+                </div>
+              </div>
+            </div>
+            <hr/>
+            <div class="generator--row">
+              <div class="generator--half-row flex-start">
+                <input type="checkbox" name="Divide Gradient" id="addPercentage">&nbsp;
+                <label for="addPercentage">Divide gradient ?</label> 
+              </div>
+            </div>
+            <div id="percent" class="generator--row">
+              <div class="generator--half-row">
+                <label for="colorOnePercent">First Color Percentage</label>
+                <input type="number" name="color One gradient percentage" id="colorOnePercent" max="100" value="50">
+                <aside class="percentage">%</aside>
+              </div>
+            </div>
+            <hr/>
+            <div id="typeInput" class="generator--row">
+              <div class="generator--half-row flex-start">
+                <input type="radio" name="type" id="textRadio" checked="checked">&nbsp;
+                <label for="textRadio">Text</label> 
+              </div>
+              <div class="generator--half-row flex-start">
+                <input type="radio" name="type" id="imageRadio">&nbsp;
+                <label for="imageRadio">Image ?</label>              
+              </div>
+            </div>
+            <div id="image" class="generator--row">
+              <div class="generator--half-row">
+                <label for="imgUrl">Your Image</label>
+                <input type="text" placeholder="https://" id="imgUrl" value="https://picsum.photos/200/200">
+              </div>
+              <div class="generator--half-row">
+                <label for="imgWidth">Image width</label>
+                <input type="number" name="Image width" id="imgWidth" value="600">
+                <aside class="px">px</aside>
+              </div>
+            </div>
+            <div id="text">
+              <div class="generator--row">
+                <div class="generator--half-row">
+                  <label for="innerDivWidth">Inner div width</label>
+                  <input type="number" name="Inner div width" id="innerDivWidth" value="300">
+                  <aside class="percentage">px</aside>
+                </div>
+              </div>
+              <div id="background" class="generator--row flex-start">
+                <input type="checkbox" name="center" id="backgroundColor" checked="checked">&nbsp;
+                <label for="backgroundColor">Add a background color to you inner div ?</label>    
+              </div>
+              <div id="backgroundInput" class="generator--row">
+                <div class="generator--half-row">
+                  <label for="innerDivbgColor">Inner div Background-color</label>
+                  <input type="text" name="Fallback color" id="innerDivbgColor" value="#e7e8f0" data-coloris>
+                </div>
+              </div>
+            </div>
+            <hr/>
+            <div class="generator--row">
+              <div class="generator--half-row">
+                <label for="innerDivAlign">Align</label>
+                <select id="innerDivAlign" name="Align Select">
+                  <option value="left">Left</option>
+                  <option value="center" selected="selected">Center</option>
+                  <option value="right">Right</option>
+                </select>
+              </div>
+            </div>
+            <hr>
+            <p class="heading">Mobile General Settings</p>
+            <div class="generator--row">
+              <div class="generator--half-row">
+                <label for="innerDivMobWidth">Mobile Inner div width</label>
+                <input type="number" name="Padding" id="innerDivMobWidth" value="200">
+                <aside class="px">px</aside>
+              </div>
+            </div>
+          </div>
+          <div class="flex-col-md-7">
+            <button type="button" id="toggle_view">Mobile View</button>
+            <div id="preview"></div>
+          </div>
+        </div>
+        <div class="flex-row">
+          <div class="code-block">
+            <h3>HTML code</h3>
+            <div id="code"></div>
+            <div class="copypress">
+              <button class="copy" id="copyBegin" onclick="copyBegin(this)">Copy to Clipboard</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>© Matthieu Solente <span id="year"></span> <a href="https://github.com/matthieuSolente/email-faux-absolute-background-image-generator/"> View on Github <img src="https://github.com/matthieuSolente/email-faux-absolute-background-image-generator/blob/main/img/github-mark.png?raw=true" alt="my github page" style="width:20px"></a></p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/coloris.js"></script>
+    <script type="text/javascript" src="js/script3.js"></script>
+  </body>
+</html>

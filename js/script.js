@@ -168,7 +168,7 @@ function htmlDecode(input) {
         $('#backgroundInput').hide();
         innerDivbgColor = '';
       }
-
+      fitShape='t';
       text = '&lt;table align=&quot;' + innerDivAlign + '&quot; role=&quot;presentation&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;  style=&quot;max-width:' + innerDivWidth + ';background-color:' + innerDivbgColor + '&quot;&gt;&lt;tr&gt;&lt;td style=&quot;font-family: Arial, sans-serif;font-size:16px;mso-line-height-rule:exactly;line-height:21px;color:#646464;text-align:center;border-radius: 12px;padding:10px;&quot;&gt;&lt;p style=&quot;margin:0&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;';
       image = '';
       vmlHeight = 'auto';
@@ -176,7 +176,8 @@ function htmlDecode(input) {
     } else if ($('#imageRadio').is(':checked')) {
       $('#text').hide();
       $('#image').show();
-      vmlHeight = $(vmlMClass).outerHeight() * 0.75 + 'pt';
+      fitShape='f';
+      vmlHeight = $('.' + $('#mClass').val()).outerHeight() * 0.75 + 'pt';
       text = '';
       image = '&lt;table align=&quot;' + innerDivAlign + '&quot; role=&quot;presentation&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot; style=&quot;max-width:100%&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;' + imgUrl + '&quot; alt=&quot;&quot; width=&quot;' + imgWidth + '&quot; style=&quot;width:100%;max-width:' + imgWidth + 'px;height:auto;display:block&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;';
     };
@@ -188,7 +189,7 @@ function htmlDecode(input) {
       '      <!--[if mso]>\n' +
       '      <v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" style="width:' + vmlWidth + ';height:' + vmlHeight + '" fillcolor="' + colorTwo + '" stroke="f" alt="">\n' +
       '        <v:fill color2="' + colorOne + '" ' + colors + ' ' + vmlgradientAngle + ' type="gradient" />\n' +
-      '        <v:textbox inset="' + containerLrPadding + ',' + containerTbPadding + ',' + containerLrPadding + ',' + containerLrPadding + '" style="mso-fit-shape-to-text:true">\n' +
+      '        <v:textbox inset="' + containerLrPadding + ',' + containerTbPadding + ',' + containerLrPadding + ',' + containerLrPadding + '" style="mso-fit-shape-to-text:'+fitShape+'">\n' +
       '          <![endif]-->\n' +
       '          ' + htmlDecode(text) + '\n' +
       '          ' + htmlDecode(image) + '\n' +
@@ -200,7 +201,7 @@ function htmlDecode(input) {
       '    </td>\n' +
       '  </tr>\n' +
       '</table>\n'
-    generateCode = '&lt;table role=&quot;presentation&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot; width=&quot;100%&quot; style=&quot;max-width:' + bodyWidth + 'px&quot;&gt;<br/>  &lt;tr&gt;<br/>    &lt;td class=&quot;' + mClass + '&quot; align=&quot;center&quot;  style=&quot;padding:' + containerLrPadding + ' ' + containerTbPadding + ';background-color:' + gradientFallbackColor + ';mso-shading:transparent;background:linear-gradient(' + gradientDirection + ' ' + gradientAngle + ' ' + colorOne + ' ' + colorOnePercent + ',' + colorTwo + ' ' + colorTwoPercent + ');&quot;&gt;<br/>      &lt;!--[if mso]&gt;<br/>      &lt;v:rect xmlns:v=&quot;urn:schemas-microsoft-com:vml&quot; xmlns:o=&quot;urn:schemas-microsoft-com:office:office&quot; style=&quot;width:' + vmlWidth + ';height:' + vmlHeight + '&quot; fillcolor=&quot;' + colorTwo + '&quot; stroke=&quot;f&quot; alt=&quot;&quot;&gt;<br/>        &lt;v:fill color2=&quot;' + colorOne + '&quot; ' + colors + ' ' + vmlgradientAngle + ' type=&quot;gradient&quot; /&gt;<br/>        &lt;v:textbox inset=&quot;' + containerLrPadding + ',' + containerTbPadding + ',' + containerLrPadding + ',' + containerLrPadding + '&quot; style=&quot;mso-fit-shape-to-text:true&quot;&gt;<br/>          &lt;![endif]--&gt;<br/>          ' + text + '<br/>          ' + image + '<br/>        &lt;!--[if mso]&gt;<br/>       &lt;p style=&quot;margin:0;mso-hide:all&quot;&gt;&lt;o:p xmlns:o=&quot;urn:schemas-microsoft-com:office:office&quot;&gt; &lt;/o:p&gt;&lt;/p&gt;    <br/>      &lt;/v:textbox&gt;<br/>      &lt;/v:rect&gt;<br/>    &lt;![endif]--&gt;<br/>    &lt;/td&gt;<br/>  &lt;/tr&gt;<br/>&lt;/table&gt;';
+    generateCode = '&lt;table role=&quot;presentation&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot; width=&quot;100%&quot; style=&quot;max-width:' + bodyWidth + 'px&quot;&gt;<br/>  &lt;tr&gt;<br/>    &lt;td class=&quot;' + mClass + '&quot; align=&quot;center&quot;  style=&quot;padding:' + containerLrPadding + ' ' + containerTbPadding + ';background-color:' + gradientFallbackColor + ';mso-shading:transparent;background:linear-gradient(' + gradientDirection + ' ' + gradientAngle + ' ' + colorOne + ' ' + colorOnePercent + ',' + colorTwo + ' ' + colorTwoPercent + ');&quot;&gt;<br/>      &lt;!--[if mso]&gt;<br/>      &lt;v:rect xmlns:v=&quot;urn:schemas-microsoft-com:vml&quot; xmlns:o=&quot;urn:schemas-microsoft-com:office:office&quot; style=&quot;width:' + vmlWidth + ';height:' + vmlHeight + '&quot; fillcolor=&quot;' + colorTwo + '&quot; stroke=&quot;f&quot; alt=&quot;&quot;&gt;<br/>        &lt;v:fill color2=&quot;' + colorOne + '&quot; ' + colors + ' ' + vmlgradientAngle + ' type=&quot;gradient&quot; /&gt;<br/>        &lt;v:textbox inset=&quot;' + containerLrPadding + ',' + containerTbPadding + ',' + containerLrPadding + ',' + containerLrPadding + '&quot; style=&quot;mso-fit-shape-to-text:'+fitShape+'&quot;&gt;<br/>          &lt;![endif]--&gt;<br/>          ' + text + '<br/>          ' + image + '<br/>        &lt;!--[if mso]&gt;<br/>       &lt;p style=&quot;margin:0;mso-hide:all&quot;&gt;&lt;o:p xmlns:o=&quot;urn:schemas-microsoft-com:office:office&quot;&gt; &lt;/o:p&gt;&lt;/p&gt;    <br/>      &lt;/v:textbox&gt;<br/>      &lt;/v:rect&gt;<br/>    &lt;![endif]--&gt;<br/>    &lt;/td&gt;<br/>  &lt;/tr&gt;<br/>&lt;/table&gt;';
 
 
     $('#preview').html(generatePreview);

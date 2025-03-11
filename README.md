@@ -27,4 +27,6 @@ Gradient, by default, doesn't work on :
 - ❌ web.de, 
 - ❌ GMX,
 
+And other mailboxes. Everything has been tested on Testi@.
+
 Enjoy and don't hesitate to give me feedback if you see any areas for improvement or bugs!

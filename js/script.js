@@ -178,7 +178,7 @@ function htmlDecode(input) {
       $('#image').show();
       vmlHeight = $(vmlMClass).outerHeight() * 0.75 + 'pt';
       text = '';
-      image = '&lt;table align=&quot;' + innerDivAlign + '&quot; role=&quot;presentation&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot; style=&quot;max-width:100%&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;' + imgUrl + '&quot; alt=&quot;&quot; width=&quot;' + imgWidth + '&quot; style=&quot;width:100%;max-width:' + imgWidth + ';height:auto;display:block&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;';
+      image = '&lt;table align=&quot;' + innerDivAlign + '&quot; role=&quot;presentation&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot; style=&quot;max-width:100%&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;' + imgUrl + '&quot; alt=&quot;&quot; width=&quot;' + imgWidth + '&quot; style=&quot;width:100%;max-width:' + imgWidth + 'px;height:auto;display:block&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;';
     };
 
     generatePreview = '\n' +

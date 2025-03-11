@@ -169,7 +169,7 @@ function htmlDecode(input) {
         innerDivbgColor = '';
       }
 
-      text = '&lt;table align=&quot;' + innerDivAlign + '&quot;role=&quot;presentation&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;  style=&quot;max-width:' + innerDivWidth + ';background-color:' + innerDivbgColor + '&quot;&gt;&lt;tr&gt;&lt;td style=&quot;font-family: Arial, sans-serif;font-size:16px;mso-line-height-rule:exactly;line-height:21px;color:#646464;text-align:center;border-radius: 12px;padding:10px;&quot;&gt;&lt;p style=&quot;margin:0&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;';
+      text = '&lt;table align=&quot;' + innerDivAlign + '&quot; role=&quot;presentation&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;  style=&quot;max-width:' + innerDivWidth + ';background-color:' + innerDivbgColor + '&quot;&gt;&lt;tr&gt;&lt;td style=&quot;font-family: Arial, sans-serif;font-size:16px;mso-line-height-rule:exactly;line-height:21px;color:#646464;text-align:center;border-radius: 12px;padding:10px;&quot;&gt;&lt;p style=&quot;margin:0&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;';
       image = '';
       vmlHeight = 'auto';
 
@@ -178,7 +178,7 @@ function htmlDecode(input) {
       $('#image').show();
       vmlHeight = $(vmlMClass).outerHeight() * 0.75 + 'pt';
       text = '';
-      image = '&lt;table role=&quot;presentation&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot; style=&quot;max-width:100%&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;' + imgUrl + '&quot; alt=&quot;&quot; width=&quot;' + imgWidth + '&quot; style=&quot;width:100%;max-width:' + imgWidth + ';height:auto;display:block&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;';
+      image = '&lt;table align=&quot;' + innerDivAlign + '&quot; role=&quot;presentation&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot; style=&quot;max-width:100%&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;' + imgUrl + '&quot; alt=&quot;&quot; width=&quot;' + imgWidth + '&quot; style=&quot;width:100%;max-width:' + imgWidth + ';height:auto;display:block&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;';
     };
 
     generatePreview = '\n' +

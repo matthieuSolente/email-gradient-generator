@@ -22,9 +22,9 @@ To create a sort of separator, add a stop (percentage) to your main color. The p
 Finally, choose whether you want to insert text content or a simple image.
 
 Gradient, by default, doesn't work on : 
--Yahoo(webmail, iOS and android) 
--Outlook (webmail and iOS and android)
--web.de, 
--GMX,
+- ❌ Yahoo(webmail, iOS and android) 
+- ❌ Outlook (webmail and iOS and android)
+- ❌ web.de, 
+- ❌ GMX,
 
 Enjoy and don't hesitate to give me feedback if you see any areas for improvement or bugs!

@@ -104,7 +104,7 @@ function htmlDecode(input) {
         gradientAngle = '';
         colorOnePercent = '';
         colorTwoPercent = '';
-        colors = 'colors="' + colorTwo + ',' + colorOne + '"';
+        colors = '';
       } else if ($('#angleCheckBox').is(':checked')) {
         $('#percent').hide();
         $('#directionBox').show();
@@ -115,7 +115,7 @@ function htmlDecode(input) {
         gradientDirection = '';
         colorOnePercent = '';
         colorTwoPercent = '';
-        colors = 'colors="' + colorTwo + ',' + colorOne + '"';
+        colors = '';
 
       }
     } else if ($('#addDirAngle').is(':checked') && $('#addPercentage').is(':checked')) {

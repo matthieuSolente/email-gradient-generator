@@ -181,7 +181,7 @@ function htmlDecode(input) {
     };
 
         generatePreview='\n'
-        +'   <!--[if (gte mso 9)|(IE)]>\n'
+        +'   <!--[if mso]>\n'
         +'   <style>          \n'
         +'   .'+$('#mClass').val()+' table{\n'
         +'   width:' + innerDivWidth + ' !important\n'
@@ -189,7 +189,7 @@ function htmlDecode(input) {
         +'   </style>\n'
         +'   <![endif]-->\n'
        
-        generateCss ='&lt;!--[if (gte mso 9)|(IE)]&gt;<br/>&lt;style&gt;          <br/>.'+$('#mClass').val()+' table{<br/>width:' + innerDivWidth + ' !important<br/>}<br/>&lt;/style&gt;<br/>&lt;![endif]--&gt;';
+        generateCss ='&lt;!--[if mso]&gt;<br/>&lt;style&gt;          <br/>.'+$('#mClass').val()+' table{<br/>width:' + innerDivWidth + ' !important<br/>}<br/>&lt;/style&gt;<br/>&lt;![endif]--&gt;';
 
     
 
